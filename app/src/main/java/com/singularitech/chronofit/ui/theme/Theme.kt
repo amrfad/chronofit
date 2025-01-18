@@ -1,4 +1,4 @@
-package com.singularitech.chronos_hercules.ui.theme
+package com.singularitech.chronofit.ui.theme
 
 import android.app.Activity
 import android.os.Build

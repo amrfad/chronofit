@@ -1,4 +1,4 @@
-package com.singularitech.chronos_hercules
+package com.singularitech.chronofit
 
 import android.accessibilityservice.AccessibilityServiceInfo
 import android.app.AlertDialog
@@ -14,10 +14,10 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.button.MaterialButton
-import com.singularitech.chronos_hercules.services.AppBlockerService
-import com.singularitech.chronos_hercules.services.AppMonitoringService
-import com.singularitech.chronos_hercules.services.UsageStatsUtil
-import com.singularitech.chronos_hercules.utils.TimeCreditsManager
+import com.singularitech.chronofit.services.AppBlockerService
+import com.singularitech.chronofit.services.AppMonitoringService
+import com.singularitech.chronofit.services.UsageStatsUtil
+import com.singularitech.chronofit.utils.TimeCreditsManager
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 

@@ -1,4 +1,4 @@
-package com.singularitech.chronos_hercules
+package com.singularitech.chronofit
 
 import android.os.Bundle
 import android.os.Handler

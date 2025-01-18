@@ -12,7 +12,7 @@ android:layout_height="match_parent">
     app:layout_constraintTop_toTopOf="parent"
     android:scaleX="-1" />
 
-<com.singularitech.chronos_hercules.utils.PushUpCounter
+<com.singularitech.chronofit.utils.PushUpCounter
     android:id="@+id/pushUpCounter"
     android:layout_width="match_parent"
     android:layout_height="match_parent"

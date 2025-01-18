@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Chronos-Hercules"
+rootProject.name = "ChronoFit"
 include(":app")

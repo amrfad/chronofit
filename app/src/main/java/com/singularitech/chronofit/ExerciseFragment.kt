@@ -1,4 +1,4 @@
-package com.singularitech.chronos_hercules
+package com.singularitech.chronofit
 
 import android.Manifest
 import android.content.Context
@@ -24,8 +24,8 @@ import com.google.mediapipe.framework.image.MediaImageBuilder
 import com.google.mediapipe.tasks.core.BaseOptions
 import com.google.mediapipe.tasks.vision.core.RunningMode
 import com.google.mediapipe.tasks.vision.poselandmarker.PoseLandmarker
-import com.singularitech.chronos_hercules.utils.PushUpCounter
-import com.singularitech.chronos_hercules.utils.TimeCreditsManager
+import com.singularitech.chronofit.utils.PushUpCounter
+import com.singularitech.chronofit.utils.TimeCreditsManager
 
 class ExerciseFragment : Fragment(R.layout.fragment_exercise) {
     private lateinit var pushUpCounter: PushUpCounter

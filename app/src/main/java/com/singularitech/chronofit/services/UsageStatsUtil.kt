@@ -1,4 +1,4 @@
-package com.singularitech.chronos_hercules.services
+package com.singularitech.chronofit.services
 
 import android.app.AppOpsManager
 import android.content.Context

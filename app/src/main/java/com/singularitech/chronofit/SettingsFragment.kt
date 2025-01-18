@@ -1,4 +1,4 @@
-package com.singularitech.chronos_hercules
+package com.singularitech.chronofit
 
 import android.app.AlertDialog
 import android.app.Dialog
@@ -20,10 +20,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
-import com.singularitech.chronos_hercules.utils.AppPickerAdapter
-import com.singularitech.chronos_hercules.utils.TargetAppsAdapter
-import com.singularitech.chronos_hercules.utils.PreferencesManager
-import com.singularitech.chronos_hercules.utils.TargetApp
+import com.singularitech.chronofit.utils.AppPickerAdapter
+import com.singularitech.chronofit.utils.TargetAppsAdapter
+import com.singularitech.chronofit.utils.PreferencesManager
+import com.singularitech.chronofit.utils.TargetApp
 
 class SettingsFragment : Fragment(R.layout.fragment_settings) {
     private lateinit var preferencesManager: PreferencesManager

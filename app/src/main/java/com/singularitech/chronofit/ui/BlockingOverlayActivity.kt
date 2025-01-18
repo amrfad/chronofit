@@ -1,11 +1,11 @@
-package com.singularitech.chronos_hercules.ui
+package com.singularitech.chronofit.ui
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.singularitech.chronos_hercules.R
+import com.singularitech.chronofit.R
 import com.google.android.material.button.MaterialButton
-import com.singularitech.chronos_hercules.MainActivity
+import com.singularitech.chronofit.MainActivity
 
 class BlockingOverlayActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

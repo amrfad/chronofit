@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.singularitech.chronos_hercules.HomeFragment"
+        android:name="com.singularitech.chronofit.HomeFragment"
         android:label="Home">
         <action
             android:id="@+id/action_home_to_settings"
@@ -18,12 +18,12 @@
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.singularitech.chronos_hercules.SettingsFragment"
+        android:name="com.singularitech.chronofit.SettingsFragment"
         android:label="Settings" />
 
     <fragment
         android:id="@+id/exerciseFragment"
-        android:name="com.singularitech.chronos_hercules.ExerciseFragment"
+        android:name="com.singularitech.chronofit.ExerciseFragment"
         android:label="Exercise">
         <action
             android:id="@+id/action_exercise_to_home"

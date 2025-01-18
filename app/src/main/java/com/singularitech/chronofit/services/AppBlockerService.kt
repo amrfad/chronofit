@@ -1,4 +1,4 @@
-package com.singularitech.chronos_hercules.services
+package com.singularitech.chronofit.services
 
 import android.accessibilityservice.AccessibilityService
 import android.content.Context
@@ -8,7 +8,7 @@ import android.content.IntentFilter
 import android.accessibilityservice.AccessibilityServiceInfo
 import android.os.Handler
 import android.os.Looper
-import com.singularitech.chronos_hercules.ui.BlockingOverlayActivity
+import com.singularitech.chronofit.ui.BlockingOverlayActivity
 
 class AppBlockerService : AccessibilityService() {
     private lateinit var targetPackage: String
@@ -28,7 +28,7 @@ class AppBlockerService : AccessibilityService() {
         }
         registerReceiver(
             blockReceiver,
-            IntentFilter("com.singularitech.chronos_hercules.BLOCK_APP")
+            IntentFilter("com.singularitech.chronofit.BLOCK_APP")
         )
     }
 

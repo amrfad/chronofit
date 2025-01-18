@@ -20,7 +20,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ChronosHercules">
+        android:theme="@style/Theme.ChronoFit">
         <service
             android:name=".services.AppMonitoringService"
             android:enabled="true"
@@ -29,7 +29,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.ChronosHercules">
+            android:theme="@style/Theme.ChronoFit">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -51,7 +51,7 @@
             android:name=".services.BlockAppReceiver"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.singularitech.chronos_hercules.BLOCK_APP" />
+                <action android:name="com.singularitech.chronofit.BLOCK_APP" />
             </intent-filter>
         </receiver>
         <activity

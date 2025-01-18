@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.singularitech.chronos_hercules"
+    namespace = "com.singularitech.chronofit"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.singularitech.chronos_hercules"
+        applicationId = "com.singularitech.chronofit"
         minSdk = 26
         targetSdk = 34
         versionCode = 1

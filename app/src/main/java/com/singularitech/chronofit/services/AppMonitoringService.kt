@@ -1,4 +1,4 @@
-package com.singularitech.chronos_hercules.services
+package com.singularitech.chronofit.services
 
 import android.app.*
 import android.content.Context
@@ -7,7 +7,7 @@ import android.os.IBinder
 import android.app.usage.UsageStatsManager
 import android.app.usage.UsageEvents
 import androidx.core.app.NotificationCompat
-import com.singularitech.chronos_hercules.utils.PreferencesManager
+import com.singularitech.chronofit.utils.PreferencesManager
 import kotlinx.coroutines.*
 
 class AppMonitoringService : Service() {
@@ -79,7 +79,7 @@ class AppMonitoringService : Service() {
             if (currentTime - lastCreditDeduction >= MINUTE_IN_MILLIS) {
                 if (credits <= 0) {
                     // Broadcast intent to block app
-                    sendBroadcast(Intent("com.singularitech.chronos_hercules.BLOCK_APP"))
+                    sendBroadcast(Intent("com.singularitech.chronofit.BLOCK_APP"))
                 } else {
                     // Deduct 1 minute credit
                     prefs.edit().putInt("time_credits", credits - 1).apply()

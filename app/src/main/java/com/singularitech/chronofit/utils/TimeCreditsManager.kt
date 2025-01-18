@@ -1,4 +1,4 @@
-package com.singularitech.chronos_hercules.utils
+package com.singularitech.chronofit.utils
 
 import android.content.Context
 

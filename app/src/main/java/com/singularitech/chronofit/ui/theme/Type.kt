@@ -1,4 +1,4 @@
-package com.singularitech.chronos_hercules.ui.theme
+package com.singularitech.chronofit.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -1,4 +1,4 @@
-package com.singularitech.chronos_hercules.utils
+package com.singularitech.chronofit.utils
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.singularitech.chronos_hercules.R
+import com.singularitech.chronofit.R
 
 class AppPickerAdapter(
     private val apps: MutableList<TargetApp>,

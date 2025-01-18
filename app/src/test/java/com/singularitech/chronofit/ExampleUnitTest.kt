@@ -1,4 +1,4 @@
-package com.singularitech.chronos_hercules
+package com.singularitech.chronofit
 
 import org.junit.Test
 

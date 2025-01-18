@@ -1,6 +1,6 @@
-package com.singularitech.chronos_hercules.utils
+package com.singularitech.chronofit.utils
 
-import com.singularitech.chronos_hercules.R
+import com.singularitech.chronofit.R
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

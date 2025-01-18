@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Chronos-Hercules</string>
+    <string name="app_name">ChronoFit</string>
     <string name="accessibility_service_description">This service monitors and manages app usage based on earned exercise credits</string>
 
     <!-- Tambahan strings yang mungkin diperlukan -->
