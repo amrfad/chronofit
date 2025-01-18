@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.singularitech.chronos_hercules.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_home_to_settings"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_home_to_exercise"
+            app:destination="@id/exerciseFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.singularitech.chronos_hercules.SettingsFragment"
+        android:label="Settings" />
+
+    <fragment
+        android:id="@+id/exerciseFragment"
+        android:name="com.singularitech.chronos_hercules.ExerciseFragment"
+        android:label="Exercise">
+        <action
+            android:id="@+id/action_exercise_to_home"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+
+</navigation>

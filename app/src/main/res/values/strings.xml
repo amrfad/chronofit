@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Chronos-Hercules</string>
+    <string name="accessibility_service_description">This service monitors and manages app usage based on earned exercise credits</string>
+
+    <!-- Tambahan strings yang mungkin diperlukan -->
+    <string name="no_credits_title">No Time Credits Left!</string>
+    <string name="no_credits_message">Do some push-ups to earn more screen time.</string>
+    <string name="start_exercise">Start Exercise</string>
+</resources>
