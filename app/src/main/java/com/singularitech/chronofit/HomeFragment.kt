@@ -6,6 +6,8 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.view.View
@@ -63,6 +65,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             return
         }
 
+        // Check Overlay Permission
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(requireContext())) {
+            showOverlayPermissionDialog()
+            return
+        }
+
         // Check Accessibility Service
         if (!isAccessibilityServiceEnabled()) {
             showAccessibilityDialog()
@@ -95,6 +103,21 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             .setMessage("This app needs Usage Access permission to monitor app usage time. Please enable it in Settings.")
             .setPositiveButton("Open Settings") { _, _ ->
                 UsageStatsUtil.openUsageSettings(requireContext())
+            }
+            .setNegativeButton("Cancel", null)
+            .show()
+    }
+
+    private fun showOverlayPermissionDialog() {
+        AlertDialog.Builder(requireContext())
+            .setTitle("Overlay Permission Required")
+            .setMessage("Please allow app to display over other apps for blocking feature to work")
+            .setPositiveButton("Open Settings") { _, _ ->
+                val intent = Intent(
+                    Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                    Uri.parse("package:${requireContext().packageName}")
+                )
+                startActivity(intent)
             }
             .setNegativeButton("Cancel", null)
             .show()

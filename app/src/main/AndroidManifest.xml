@@ -36,6 +36,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name=".services.AppBlockerService"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
@@ -47,6 +48,7 @@
                 android:name="android.accessibilityservice"
                 android:resource="@xml/accessibility_service_config" />
         </service>
+
         <receiver
             android:name=".services.BlockAppReceiver"
             android:exported="false">
@@ -54,10 +56,15 @@
                 <action android:name="com.singularitech.chronofit.BLOCK_APP" />
             </intent-filter>
         </receiver>
+
         <activity
             android:name=".ui.BlockingOverlayActivity"
             android:theme="@style/Theme.AppCompat.Translucent"
             android:excludeFromRecents="true"
-            android:launchMode="singleTask" />
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:showOnLockScreen="true"
+            android:exported="false">
+        </activity>
     </application>
 </manifest>

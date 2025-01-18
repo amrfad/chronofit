@@ -6,8 +6,10 @@ import android.content.Intent
 import android.view.accessibility.AccessibilityEvent
 import android.content.IntentFilter
 import android.accessibilityservice.AccessibilityServiceInfo
+import android.content.pm.PackageManager
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import com.singularitech.chronofit.ui.BlockingOverlayActivity
 
 class AppBlockerService : AccessibilityService() {
@@ -24,7 +26,9 @@ class AppBlockerService : AccessibilityService() {
     private fun setupBlockReceiver() {
         blockReceiver = BlockAppReceiver {
             performGlobalAction(GLOBAL_ACTION_HOME)
-            showBlockingOverlay()
+            Handler(Looper.getMainLooper()).postDelayed({
+                showBlockingOverlay()
+            }, 500)
         }
         registerReceiver(
             blockReceiver,
@@ -47,23 +51,22 @@ class AppBlockerService : AccessibilityService() {
         serviceInfo = info
     }
 
+    // TODO: Fix ketidakbergunaan fungsi ini
     override fun onAccessibilityEvent(event: AccessibilityEvent) {
         if (event.eventType == AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED) {
             val prefs = getSharedPreferences("PushUpTimer", Context.MODE_PRIVATE)
             val credits = prefs.getInt("time_credits", 0)
             val targetPackage = prefs.getString("target_app", "") ?: ""
 
-            if (credits <= 0 && event.packageName == targetPackage) {
-                if (!isBlocking) {
-                    isBlocking = true
-                    performGlobalAction(GLOBAL_ACTION_HOME)
-                    showBlockingOverlay()
+            // Cek apakah harus memblokir
+            if (credits <= 0 && event.packageName == targetPackage && !isBlocking) {
+                isBlocking = true
+                performGlobalAction(GLOBAL_ACTION_HOME)
 
-                    // Reset blocking flag after delay
-                    Handler(Looper.getMainLooper()).postDelayed({
-                        isBlocking = false
-                    }, 1000)
-                }
+                Handler(Looper.getMainLooper()).postDelayed({
+                    showBlockingOverlay()
+                    isBlocking = false
+                }, 1000)
             }
         }
     }
